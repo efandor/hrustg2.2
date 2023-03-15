@@ -1,0 +1,12 @@
+@import '../../style/variables';
+
+.length-warning {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+}
+
+.text {
+  font-size: 12px;
+  color: darken($light-color, 60%);
+}

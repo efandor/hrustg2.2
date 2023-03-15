@@ -1,0 +1,42 @@
+@import '../../style/variables';
+
+.header {
+   flex: 0 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   min-height: 55px;
+}
+
+a:link,
+a:visited,
+a:active,
+:hover { 
+   text-decoration: none;
+}
+
+.title {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.title-img {
+   display: block;
+   fill: darken($light-color, 60%);
+}
+
+.title-text {
+   display: block;
+   font-size: 28px;
+   font-weight: 400;
+   padding: 5px;
+   color: darken($light-color, 60%);
+
+   &:visited,
+   &:active,
+   &:hover {
+      text-decoration: none;
+      color: darken($light-color, 60%);
+   }
+}

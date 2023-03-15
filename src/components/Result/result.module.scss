@@ -1,0 +1,59 @@
+@import '../../style/variables';
+
+.result {
+  max-width: 80vw;
+  width: 400px;
+  border-bottom: 1px solid darken($light-color, 10%);
+  list-style-type: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 80vw;
+  padding: 10px;
+  border-radius: $border-radius;
+
+  & div {
+    position: relative;
+  }
+}
+
+.name {
+  max-width: 80vw;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: $dark-color;
+  word-wrap:break-word;
+
+  &:active,
+  &:visited,
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+}
+
+.description{
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 12px;
+  width: 100%;
+  color: darken($light-color, 60%);
+  word-wrap:break-word;
+}
+
+.message {
+  margin-top: 50px;
+  font-size: 18px;
+  align-self: center;
+  color: darken($light-color, 60%);
+  user-select: none;
+}
