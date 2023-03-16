@@ -1,4 +1,24 @@
 $dark-color: #468189;
-$light-color: #E4F8F7;
+$light-color: #fbfbff;
 $primary-font-family: 'Roboto', 'Open Sans', sans-serif;
 $border-radius: 10px;
+
+$small: 640px;
+$large: 1024px;
+
+$media: (
+    small: 640px,
+    large: 768px,
+);
+
+@mixin adapt($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin flexed($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}

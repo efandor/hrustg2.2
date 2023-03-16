@@ -2,9 +2,7 @@
 
 .header {
    flex: 0 0 auto;
-   display: flex;
-   justify-content: center;
-   align-items: flex-end;
+   @include flexed;
    min-height: 55px;
 }
 
@@ -16,14 +14,12 @@ a:active,
 }
 
 .title {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+   @include flexed(space-between);
 }
 
 .title-img {
    display: block;
-   fill: darken($light-color, 60%);
+   fill: $dark-color;
 }
 
 .title-text {
@@ -31,12 +27,19 @@ a:active,
    font-size: 28px;
    font-weight: 400;
    padding: 5px;
-   color: darken($light-color, 60%);
+   color: $dark-color;
+   user-select: none;
 
    &:visited,
    &:active,
    &:hover {
       text-decoration: none;
-      color: darken($light-color, 60%);
+      color: $dark-color;
    }
 }
+
+@include adapt($small) {
+   .title-text {
+      font-size: 22px;
+   }
+ }

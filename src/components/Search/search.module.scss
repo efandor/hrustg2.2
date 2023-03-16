@@ -1,39 +1,45 @@
 @import '../../style/variables';
 
 .container {
-  display: flex;
+  @include flexed(flex-start);
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   width: 100%;
-  min-height: 100%;
   padding: 30px;
   border-radius: $border-radius;
   box-shadow: 0 10px 20px 0 $dark-color;
 }
 
 .form {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexed;
   gap: 50px;
   min-height: max-content;
-  width: 350px;
   height: 100px;
+
+  & div {
+    position: relative;
+  }
 }
 
 .name {
   font-size: 14px;
   height: 50px;
-  width: 200px;
+  max-width: 80vw;
+  width: 400px;
   padding-left: 15px;
-  outline: none;
-  border: 1px solid darken($light-color, 10%);
+
+  border: none;
   border-radius: $border-radius;
+  color: $dark-color;
+  font-size: 16px;
+  font-weight: bolder;
+  background-color: lighten($dark-color, 50%);
   
   &::placeholder {
-    color: darken($light-color, 60%);
+    color: lighten($dark-color, 20%);
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
@@ -46,21 +52,37 @@
   height: 50px;
   width: 120px;
   outline: none;
-  border: 1px solid darken($light-color, 60%);
   border-radius: $border-radius;
-  background-color: darken($light-color, 60%);
+  background-color: $dark-color;
   color: $light-color;
   font-weight: bold;
   cursor: pointer;
 
   &:hover {
+    border: 1px solid $dark-color;
     background-color: $light-color;
-    color: darken($light-color, 60%);
-    border: 2px solid darken($light-color, 30%);
+    color: $dark-color;
+    box-shadow: 0 10px 20px 0 $dark-color;
     transition: all 0.3s;
+  }
+
+  &:active {
+    height: 48px;
   }
 }
 
 .text {
   font-size: 18px;
+}
+
+@include adapt($small) {
+  .container {
+    padding: 10px;
+  }
+
+  .form {
+    flex-direction: column;
+    gap: 30px;
+    height: 150px;
+  }
 }

@@ -14,7 +14,7 @@ export class Search {
                         <button type='submit' class='${css.submit}'>
                             <span class='${css.text}'>Search</span>
                         </button>
-                    </form>                    
+                    </form>
             `,
         }).element;
     }

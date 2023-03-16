@@ -5,7 +5,7 @@ export class Results {
     constructor() {
         this.element = new DomElement({
             className: css.results,
-            type: 'ul',
+            type: 'ol',
         }).element;
     }
 }

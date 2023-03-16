@@ -1,18 +1,19 @@
 @import '../../style/variables';
 
 .result {
-  max-width: 80vw;
-  width: 400px;
-  border-bottom: 1px solid darken($light-color, 10%);
-  list-style-type: none;
+  width: 100%;
+  max-width: 60vw;
+  border-bottom: 1px solid lighten($dark-color, 20%);
+
+  &::marker {
+    font-size: 12px;
+    color: lighten($dark-color, 10%);
+  }
 }
 
 .container {
-  display: flex;
+  @include flexed(flex-start, flex-start);
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  max-width: 80vw;
   padding: 10px;
   border-radius: $border-radius;
 
@@ -22,12 +23,13 @@
 }
 
 .name {
-  max-width: 80vw;
-  cursor: pointer;
+  width: 100%;
+  max-width: 70vw;
   font-size: 14px;
   font-weight: bold;
   color: $dark-color;
-  word-wrap:break-word;
+  word-wrap: break-word;
+  cursor: pointer;
 
   &:active,
   &:visited,
@@ -38,22 +40,27 @@
   &:hover {
     text-decoration: underline;
   }
-
 }
 
 .description{
+  max-width: 65vw;
   margin-left: 20px;
   margin-top: 10px;
   font-size: 12px;
-  width: 100%;
-  color: darken($light-color, 60%);
-  word-wrap:break-word;
+  color: $dark-color;
+  word-wrap: break-word;
 }
 
 .message {
   margin-top: 50px;
   font-size: 18px;
   align-self: center;
-  color: darken($light-color, 60%);
+  color: $dark-color;
   user-select: none;
+}
+
+@include adapt($small) {
+  .result {
+    max-width: 75vw;
+  }
 }

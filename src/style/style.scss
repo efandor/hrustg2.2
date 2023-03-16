@@ -12,5 +12,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: $primary-font-family;
-  color: darken($light-color, 20%);;
+  color: $dark-color;
+  background-color: $light-color;
 }

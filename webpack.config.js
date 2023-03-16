@@ -59,7 +59,7 @@ module.exports = {
         ],
     },
     plugins: [new HtmlWebpackPlugin({
-                                        title: 'Kanban by Pavel',
+                                        title: 'Github repos search',
                                         favicon:	'./src/assets/images/favicon/favicon.ico',
     })],
 };

@@ -5,9 +5,8 @@ export class LengthWarning {
     constructor() {
         this.element = new DomElement({
             className: css.lengthWarning,
-            html: `
-              <span class='${css.text}'>Enter more than 3 symbols</span>
-            `,
+            type: 'span',
+            html: `Enter more than 3 symbols`,
         }).element;
     }
 }

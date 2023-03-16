@@ -1,13 +1,16 @@
 @import '../../style/variables';
 
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexed;
   min-height: 55px;
   max-width: 100%;
   font-size: 18px;
   font-weight: bold;
-  color: darken($light-color, 30%);
+  color: $dark-color;
   user-select: none;
+
+  @include adapt($small) {
+    min-height: 35px;
+    font-size: 14px;
+  }
 }

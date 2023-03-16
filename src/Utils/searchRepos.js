@@ -1,6 +1,6 @@
+import { URL } from '../components/Constants/constants'
 import { Result } from '../components/Result/Result';
 import { results, nameInput, lengthWarning } from './render';
-import { URL } from '../components/Constants/constants'
 import { isShortLength } from './isShortLength';
 
 export const searchRepos = async (event) => {
@@ -24,9 +24,10 @@ export const searchRepos = async (event) => {
         results.append(new Result().element)
       }
     } else {
-      nameInput.parentNode.append(lengthWarning);
+       lengthWarning.remove();
+       nameInput.parentNode.append(lengthWarning);
     }
   } catch (err) {
     console.warn(err);
   }
-};
+}
