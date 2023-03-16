@@ -26,7 +26,6 @@
   max-width: 80vw;
   width: 400px;
   padding-left: 15px;
-
   border: none;
   border-radius: $border-radius;
   color: $dark-color;
@@ -51,7 +50,7 @@
 .submit {
   height: 50px;
   width: 120px;
-  outline: none;
+  border: 1px solid $dark-color;
   border-radius: $border-radius;
   background-color: $dark-color;
   color: $light-color;
@@ -67,7 +66,7 @@
   }
 
   &:active {
-    height: 48px;
+    font-weight: normal;
   }
 }
 
