@@ -29,13 +29,6 @@ a:active,
    padding: 5px;
    color: $dark-color;
    user-select: none;
-
-   &:visited,
-   &:active,
-   &:hover {
-      text-decoration: none;
-      color: $dark-color;
-   }
 }
 
 @include adapt($small) {

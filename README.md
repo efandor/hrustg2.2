@@ -12,10 +12,22 @@ Clone project and install dependencies:
 npm install
 ```
 
-How to run WebPack dev server (http://localhost:9000/):
+How to run WebPack dev server [Local deploy](http://localhost:9000/):
 
 ```bash
 npm start
+```
+
+Check linter rules with eslint-config-airbnb-base configuration:
+
+```bash
+npm run lint
+```
+
+Autofix linter rules:
+
+```bash
+npm run lint-fix
 ```
 
 How to build project:

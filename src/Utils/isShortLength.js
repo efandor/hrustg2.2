@@ -1,1 +1,1 @@
-export const isShortLength = ( { value } ) => value.length < 4;
+export const isShortLength = ({ value }) => value.length < 4;

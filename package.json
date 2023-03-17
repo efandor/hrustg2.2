@@ -4,8 +4,9 @@
     "description": "Search repositories on github",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "build": "webpack",
+        "lint": "eslint src/**/*.js",
+        "lint-fix": "eslint src/**/*.js --fix",
         "start": "webpack serve --hot"
     },
     "author": "Pavel Litvinov",
@@ -18,12 +19,15 @@
         "@babel/preset-env": "^7.20.2",
         "babel-loader": "^9.1.2",
         "css-loader": "^6.7.3",
+        "eslint": "^8.36.0",
+        "eslint-config-airbnb-base": "^15.0.0",
         "file-loader": "^6.2.0",
         "html-loader": "^4.2.0",
         "html-webpack-plugin": "^5.5.0",
         "sass": "^1.59.2",
         "sass-loader": "^13.2.0",
         "style-loader": "^3.3.2",
+        "terser-webpack-plugin": "^5.3.7",
         "webpack": "^5.76.1",
         "webpack-cli": "^5.0.1",
         "webpack-dev-server": "^4.11.1"
